@@ -1,28 +1,42 @@
-html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		background-color:#091A2A;
-		font-family: '';
-	}
-	*
-	{
-		box-sizing: border-box;
-	}
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.title-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+html,
+body 
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#091A2A;
 }
-.btn-red{
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+
+*{
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'GothicBold';
+    src: url('/tap-to-earn-astro/public/assets/fonts/ZenMaruGothic-Bold.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'GothicMed';
+    src: url('/fonts/ZenMaruGothic-Medium') format('truetype');
+}
+@layer components{
+    .dashed-border{
+        @apply border-2 border-dashed border-[#eaa2f3]
+    }
+    .heading-text{
+        @apply text-center text-white font-bold font-gothicBold text-3xl sm:text-4xl lg:text-5xl
+    }
+    .para-text{
+        @apply text-center text-white font-gothicMed font-bold text-lg sm:text-xl lg:text-2xl
+    }
+    .gradient-border{
+        @apply border-3 border-transparent bg-clip-border;
+        background-image: linear-gradient(to right, #DB25B1, #1077FE);
+    }
+    
 }
