@@ -1,0 +1,75 @@
+---
+const data = [
+  {
+    icon: '/public/assets/technologyStacks/blockchain.webp',
+    title: "Blockchain Technologies",
+    content: ["TON", "Ethereum", "Binance Smart Chain", "Solana"]
+  },
+  {
+    icon: '/public/assets/technologyStacks/smartContracts.webp',
+    title: "Smart Contracts",
+    content: ["Solidity", "Truffle", "Hardhat"]
+  },
+  {
+    icon: '/public/assets/technologyStacks/gameEng.webp',
+    title: "Game Engines",
+    content: ["Unity", "Unreal Engine"]
+  },
+  {
+    icon: '/public/assets/technologyStacks/cloud.webp',
+    title: "Cloud Services",
+    content: ["AWS", "Google Cloud", "Microsoft Azure"]
+  },
+  {
+    icon: '/public/assets/technologyStacks/backend.webp',
+    title: "Backend Development",
+    content: ["Node.js", "Java", "Python"]
+  },
+  {
+    icon: '/public/assets/technologyStacks/frontend.webp',
+    title: "Frontend Development",
+    content: ["React.js", "Vue.js", "Angular"]
+  },
+  {
+    icon: '/public/assets/technologyStacks/payment.webp',
+    title: "Payment Integration",
+    content: ["MetaMask", "Trust Wallet", "PayPal", "Stripe"]
+  },
+  {
+    icon: '/public/assets/technologyStacks/gametest.webp',
+    title: "Game Testing & Analytics",
+    content: ["Selenium", "Jest", "Mocha", "Google Analytics"]
+  }
+  ];
+---
+
+<div class="sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:mx-16 md:gap-16 xs:mx-4 xs:my-32 sm:my-2 xs:gap-12 place-items-center">
+    {data.map((item, index) => (
+        <div
+            class={`sm:w-[35vw] sm:h-[30vh] xs:w-[80vw] xs:h-[30vh] flex-col 
+            bg-blue-700 rounded-tr-4xl rounded-bl-4xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -outline-offset-2 p-2 dashed-border border-2 ${
+              index % 2 !== 0 ? "place-items-start" : "place-items-end"
+            } m-4`}
+        >
+        <div
+            class={`flex ${
+            index % 2 !== 0 ? "flex-row" : "flex-row-reverse"
+            } items-center`}
+        >
+            <img class="w-12 m-2" src={item.icon} alt="icon" />
+            <div class="text-center text-wrap text-white sm:text-2xl xs:text-xl font-bold font-nunitoBold">
+            {item.title}
+            </div>
+        </div>
+        <div
+            class={`text-gray-400 text-xl font-semibold font-nunitoReg leading-snug font-700 p-2 flex flex-col  `}
+        >
+        {item.content.map((item) => (
+          <div class={`flex w-full `}>
+            <h1 class={` `}>{item}</h1>
+          </div>
+        ))}
+      </div>
+    </div>
+    ))}
+</div>

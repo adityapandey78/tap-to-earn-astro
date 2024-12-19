@@ -1,0 +1,83 @@
+---
+const whyInvestCardData= [
+    {
+      icon: '/public/assets/Why_Invest_icons/BlockchainIntegration.webp',
+      title: "Growing Popularity of Crypto Gaming",
+      description:
+        "Tap-to-earn crypto games are in demand, offering players real-world rewards and giving businesses a profitable way to enter the booming blockchain gaming market.",
+    },
+    {
+      icon: '/public/assets/Why_Invest_icons/GameplayMechanics.webp',
+      title: "Simplified Gameplay Mechanics",
+      description:
+        "T2E game development focuses on simple and engaging mechanics, making these games accessible to a wide audience and ensuring consistent player engagement.",
+    },
+    {
+      icon: '/public/assets/Why_Invest_icons/Integration.webp',
+      title: "Seamless Platform Integration",
+      description:
+        "Tap-to-earn game development services ensure effortless integration with platforms like Telegram, allowing players to access games directly without additional downloads or account creation.",
+    },
+    {
+      icon: '/public/assets/Why_Invest_icons/MonetizationOpportunities.webp',
+      title: "Monetization Opportunities",
+      description:
+        "Tap-to-earn crypto games generate diverse revenue streams through in-game purchases, cryptocurrency rewards, subscriptions, and advertising, maximizing profits for businesses.",
+    },
+    {
+      icon: '/public/assets/Why_Invest_icons/MonetizationOpportunities.webp',
+      title: "Scalability and Customization",
+      description:
+        "A top tap-to-earn game development company offers scalable, flexible solutions tailored to your brand’s goals, ensuring a unique and competitive gaming platform.",
+    },
+    {
+      icon: '/public/assets/Why_Invest_icons/scalabilityAndCustomization.webp',
+      title: "Low Development Costs",
+      description:
+        "Clone scripts and prebuilt frameworks reduce tap-to-earn game development costs, helping businesses quickly enter the market with minimal investment and faster deployment.",
+    },
+    {
+      icon:'/public/assets/Why_Invest_icons/scalabilityAndCustomization.webp',
+      title: "Global Appeal",
+      description:
+        "Tap-to-earn games attract worldwide audiences by merging simple gameplay with crypto rewards, creating widespread interest and participation in various regions.",
+    },
+    {
+      icon: '/public/assets/Why_Invest_icons/lowDevelopmentCosts.webp',
+      title: "Blockchain Integration Benefits",
+      description:
+        "Tap-to-earn game development leverages blockchain technology for secure transactions, transparency, decentralized ecosystems, and a trust-building gaming experience for all participants.",
+    },
+    {
+      icon: '/public/assets/Why_Invest_icons/GlobalAppeal.webp',
+      title: "Branding Opportunities",
+      description:
+        "White-label solutions enable businesses to brand tap-to-earn crypto games, enhancing visibility and creating unique gaming experiences under their exclusive name and identity.",
+    },
+    {
+      icon: '/public/assets/Why_Invest_icons/Future-ReadyInvestment.webp',
+      title: "Future-Ready Investment",
+      description:
+        "Tap-to-earn game development is a forward-looking opportunity, aligning with the rising adoption of blockchain gaming and the growing popularity of cryptocurrency rewards.",
+    },
+  ];
+---
+{   whyInvestCardData.map((data, index) => (
+    <div class={'lg:h-[75vh] lg:w-[30vw] md:h-[60vh] md:w-[40vw] sm:w-[50vw]  xs:w-[90vw] xs:h-[55vh]  bg-white/0 rounded-3xl flex-col  justify-center place-items-center border-2 border-[#2d2d2d] p-6 '}>
+        <div class="lg:my-8 sm:my-3 xs:my-1">
+            <img
+                class="w-40 h-40"
+                src={data.icon}
+            />
+        </div>
+        <div class="">
+          <div class="text-center text-wrap text-white lg:text-3xl md:text-2xl sm:text-2xl xs:text-xl font-bold font-nunitoBold py-2">
+            {data.title}
+          </div>
+          <div class=" text-center text-wrap text-gray-400 sm:text-xl xs:text-lg font-normal font-nunitoReg leading-snug">
+            {data.description}
+          </div>
+        </div>
+    </div>
+))}
+
