@@ -1,0 +1,178 @@
+---
+const DevlopmentProcess = [
+    {
+        img: "/public/assets/devProcess/conceptualization.webp",
+        title: "Conceptualization",
+        content:
+            "Our team begins the process by understanding your vision, brainstorming ideas, and setting clear goals for your Tap-to-Earn game development.",
+    },
+    {
+        img: "/public/assets/devProcess/gamedesign.webp",
+        title: "Game Design",
+        content:
+            "Our team designs gameplay mechanics, reward systems, user interfaces, and visual elements to create an immersive and enjoyable gaming experience.",
+    },
+    {
+        img: "/public/assets/devProcess/blockchainIntegration.webp",
+        title: "Blockchain Integration",
+        content:
+            "We incorporate blockchain technology to ensure secure transactions, enabling players to earn crypto rewards through seamless, transparent in-game actions.",
+    },
+    {
+        img: "/public/assets/devProcess/smartContracts.webp",
+        title: "Smart Contract Development",
+        content:
+            "Smart contracts are developed to automate transactions, providing transparency, security, and reliability for crypto rewards and in-game purchases.",
+    },
+    {
+        img: "/public/assets/devProcess/gameDev.webp",
+        title: "Game Development",
+        content:
+            "Using powerful game engines, we build the game’s mechanics, ensuring smooth gameplay, intuitive controls, and captivating graphics for an engaging user experience.",
+    },
+    {
+        img: "/public/assets/devProcess/testingAndQA.webp",
+        title: "Testing and QA",
+        content:
+            "We conduct rigorous testing and quality assurance to identify bugs, improve game functionality, and enhance overall performance before release.",
+    },
+    {
+        img: "/public/assets/devProcess/launchndeploy.webp",
+        title: "Launch & Deployment",
+        content:
+            "After finalizing the game, we launch it across multiple platforms, making it easily accessible for players to engage with and enjoy.",
+    },
+    {
+        img: "/public/assets/devProcess/postLaunchSupp.webp",
+        title: "Post-launch Support",
+        content:
+            "We provide ongoing support, including updates, bug fixes, and optimizations, ensuring that the game continues to engage players and perform smoothly.",
+    },
+];
+---
+
+
+<div id="cards-wrapper" class="relative w-[90vw] overflow-hidden">
+    <button class="left-button absolute left-0 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#1077fe] to-[#DB25B1] rounded-full p-2 z-10">
+        
+        <svg class="h-10 w-10 text-black"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+    </button>
+
+    <div class=" relative cards-container w-[87vw]  flex justify-start justify-items-start gap-4">
+        <!--Adding the last card with first -->
+        {DevlopmentProcess.slice(DevlopmentProcess.length-1).map((data) => (
+                <div class="flex-grow flex-shrink-0 basis-1/3 w-[29vw] h-[65vh] flex-col justify-start place-items-center
+                bg-blue-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -outline-offset-2 p-2">
+                    <div class="">
+                        <div class="my-2 object-cover">
+                            <img class="" src={data.img} />
+                        </div>
+                        <div class="py-2">
+                            <div class="text-center text-wrap text-white text-2xl font-bold font-nunitoBold">
+                                {data.title}
+                            </div>
+                            <div class="text-center flex-grow whitespace-normal text-wrap text-gray-400 text-xl font-normal font-nunitoReg leading-snug text-weight-300">
+                                {data.content}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+            <!--The actual Cards -->
+        {DevlopmentProcess.map((data) => (
+                <div class=" flex-grow flex-shrink-0 basis-1/3 w-[29vw] h-[65vh] flex-col justify-start place-items-center
+                bg-blue-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -outline-offset-2 p-2">
+                    <div class="">
+                        <div class="my-2 object-cover">
+                            <img class="" src={data.img} />
+                        </div>
+                        <div class="py-2">
+                            <div class="text-center text-wrap text-white text-2xl font-bold font-nunitoBold">
+                                {data.title}
+                            </div>
+                            <div class="text-center flex-grow whitespace-normal text-wrap text-gray-400 text-xl font-normal font-nunitoReg leading-snug text-weight-300">
+                                {data.content}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+            <!--Adding the first one with last -->
+        {DevlopmentProcess.slice(0,1).map((data) => (
+                <div class=" flex-grow flex-shrink-0 basis-1/3 w-[29vw] h-[65vh] flex-col justify-center place-items-center
+                bg-blue-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -outline-offset-2 p-2">
+                    <div class="">
+                        <div class="my-2 object-cover">
+                            <img class="" src={data.img} />
+                        </div>
+                        <div class="py-2">
+                            <div class="text-center text-wrap text-white text-2xl font-bold font-nunitoBold">
+                                {data.title}
+                            </div>
+                            <div class="text-center flex-grow whitespace-normal text-wrap text-gray-400 text-xl font-normal font-nunitoReg leading-snug text-weight-300">
+                                {data.content}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+    </div>
+
+    <button class="right-button absolute right-0 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#1077fe] to-[#DB25B1] rounded-full p-2 z-10">
+        <svg class="h-10 w-10 text-black"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+    </button>
+</div>
+
+<script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+        const cardSlider = document.querySelector(".cards-container");
+        const cardButtons = document.querySelectorAll(".left-button, .right-button");
+        const cards = [...document.querySelectorAll(".cards-container > div")];
+
+        let isMoving = false;
+        let currentIndex = 1;
+
+        // Adjust initial position programmatically
+        // cardSlider.style.transform = `translateX(${-currentIndex * 29}vw)`;
+
+        function moveSlider() {
+            const cardWidth = 30; // Match the `w-[29vw]` in your CSS
+            cardSlider.style.transition = "transform 0.5s ease-in-out";
+            cardSlider.style.transform = `translateX(${-currentIndex * cardWidth}vw)`;
+            isMoving = false;
+        }
+
+        function handleCardBtnClick(e) {
+            if (isMoving) return;
+            isMoving = true;
+
+            if (e.currentTarget.classList.contains("left-button")) {
+                currentIndex--;
+            } else {
+                currentIndex++;
+            }
+
+            moveSlider();
+        }
+
+        cardButtons.forEach((button) => button.addEventListener("click", handleCardBtnClick));
+
+        cardSlider.addEventListener("transitionend", () => {
+            isMoving = false;
+            if (currentIndex === 0) {
+                currentIndex = cards.length - 3;
+                cardSlider.style.transitionDuration = "1ms";
+                return moveSlider();
+            } else if (currentIndex === cards.length - 3) {
+                currentIndex = 1;
+                cardSlider.style.transitionDuration = "1ms";
+                return moveSlider();
+            } 
+        });
+        moveSlider();
+    });
+</script>

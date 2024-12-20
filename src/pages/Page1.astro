@@ -1,5 +1,7 @@
 ---
 import ComprehensiveCard from "../components/comprehensiveCard.astro";
+import Developmentprocess from "../components/Developmentprocess.astro";
+import KeyFeaturesCarousal from "../components/KeyFeaturesCarousal.astro";
 import TechStacksCards from "../components/TechStacksCards.astro";
 import WhyInvestCards from "../components/WhyInvestCards.astro";
 const whyInvestData = [
@@ -93,6 +95,7 @@ const Diverserange= [
   ];
 
 ---
+
 <!-- Landing Page -->
 <section >
     <div class="relative w-[99vw] h-[130vh] flex flex-col justify-end items-center p-2 ">
@@ -191,6 +194,7 @@ const Diverserange= [
         </div>
     </div>
 </section>
+
 <!--- Our Comprehensive Tap-To-Earn Game development Services-->
 <section>
     <div class="">
@@ -251,11 +255,10 @@ const Diverserange= [
 </section>
 
 <!--Key Features of Our tap-to-Earn Game Development -->
-
 <section>
     <div class=" w-[90vw] border-1 border-[#eaa2f3] m-[5vw]">
         <div class="page-intro">
-            <h1 class="lg:w-[36vw]  lg:h-[14vh] sm:w-[60vw] sm:h-[12vh] xs:w-[75vw] xs:h-[16vh] xs:my-4 heading-text mt-16 leading-normal"> 
+            <h1 class="lg:w-[40vw]  lg:h-[14vh] sm:w-[60vw] sm:h-[12vh] xs:w-[75vw] xs:h-[16vh] xs:my-4 heading-text mt-16 leading-normal"> 
                 Key Features of Our Tap-to-Earn Games
             </h1>
             <p class="para-text w-[75vw] mt-5 leading-6">
@@ -263,12 +266,7 @@ const Diverserange= [
                 features designed to drive user engagement and long-term success.
             </p>
         </div>
-        <div id="carousel" class="mr-[10vw]">
-            <div class="relative w-[70vw] sm:flex sm:flex-row sm:justify-between xs:flex-col xs:justify-center items-center gap-20 my-20 bg-red-500">
-               <div class="">
-                    kkjhklhl
-               </div>
-            </div>
+        <KeyFeaturesCarousal/>   
         </div>
     </div>
 </section>
@@ -322,7 +320,6 @@ const Diverserange= [
 </section>
 
 <!--Technology stack we use for tap-to-Earn game development -->
-
 <section>
     <div class="page-intro">
         <h1 class="heading-text mt-16 lg:w-[65vw] lg:h-[20vh] sm:w-[70vw] sm:h-[15vh] xs:w-[85vw] xs:h-[16vh]">
@@ -348,8 +345,9 @@ const Diverserange= [
                 At Metaprolane, we follow a systematic approach to tap-to-earn game development, ensuring seamless execution and high-quality outcomes.
             </p>
         </div>
-        <div>
+        <div class="h-60vh w-full flex justify-center items-center">
             <!---Carousal Component -->
+            <Developmentprocess/>
             
         </div>
     </div>

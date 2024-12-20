@@ -1,0 +1,173 @@
+---
+const Keyfeatures = [
+    {
+      img: '/public/assets/key_features_webp/EffortlessGameplay.webp' ,
+      title: "Effortless Gameplay",
+      description: "T2E games offer simple, intuitive mechanics, allowing players to earn rewards by tapping on their screens. The easy-to-understand gameplay ensures quick access and broad player appeal."
+    },
+    {
+      img: '/public/assets/key_features_webp/realWorldRewards.webp' ,
+      title: "Real-World Rewards",
+      description: "Players can earn cryptocurrency, gift cards, or tangible products by progressing through the game. These rewards hold real-world value, providing meaningful incentives for player engagement."
+    },
+    {
+      img: '/public/assets/key_features_webp/SocialFeatures.webp' ,
+      title: "Social Features",
+      description: "Players can establish a community, compete, & connect through chat rooms, guilds, and leaderboards. Social features foster ongoing participation & retention by fortifying relationships."
+    },
+    {
+      img: '/public/assets/key_features_webp/IntegratedCryptoWallet.webp' ,
+      title: "Integrated Crypto Wallet",
+      description: "The built-in crypto wallet lets players securely store and manage their in-game earnings. Players can withdraw, transfer, or exchange their crypto assets with ease at any time."
+    },
+    {
+      img: '/public/assets/key_features_webp/TONBlockchainIntegration.webp' ,
+      title: "TON Blockchain Integration",
+      description: "By leveraging the Telegram Open Network (TON), we ensure fast, secure, and low-cost transactions, making in-game rewards easily transferable and accessible for players worldwide."
+    },
+    {
+      img:'/public/assets/key_features_webp/investmentpotential.webp' ,
+      title: "Investment Potential",
+      description: "Tap-to-earn games allow players to invest in in-game assets, which may appreciated over time. This creates an extra layer of excitement and financial growth potential."
+    },
+    {
+      img: '/public/assets/key_features_webp/pushNotifications.webp' ,
+      title: "Push Notifications",
+      description: "Players are kept informed about game updates, events, and special promotions through push notifications. It encourages them to revisit the game & engage with rewards or activities."
+    },
+    {
+      img: '/public/assets/key_features_webp/referralSystems.webp' ,
+      title: "Referral Systems",
+      description: "Referral systems reward both players who invite friends and new players who join the game. This incentivizes social sharing, driving growth and expanding the game’s player base."
+    },
+    {
+      img: '/public/assets/key_features_webp/competitive_play.webp',
+      title: "Competitive Play",
+      description: "Players can form teams, compete in tournaments, and earn rewards based on performance. This fosters strategic collaboration & competitive play, thereby enhancing long-term player retention."
+    }
+  ];
+---
+<div class="cards-wrapper relative w-[100%] overflow-hidden ">
+    <button class="left-button absolute  left-0 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#99ff66] to-[#1077fe] rounded-full p-2 z-10 ">
+        <svg class="h-10 w-10 text-black"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+    </button>
+
+    <div class=" relative cards-container-key-features flex justify-start justify-items-start w-[100vw] ">
+        <!--Adding the last card with the first card -->
+        { Keyfeatures.slice(Keyfeatures.length-1).map((item) =>(
+            <div class="relative flex-1-0-100 w-[100%] sm:flex sm:flex-row sm:justify-between xs:flex-col xs:justify-center items-center gap-20 my-20 mr-20"> 
+                <div class="sm:flex sm:flex-row  w-[100%]sm:justify-between  xs:flex-col xs:justify-center items-center gap-32">
+                    <div class="sm:w-[25vw] xs:w-[80vw]"> 
+                        <img class="object-cover" src={item.img} />
+                    </div>
+    
+                    <div class="lg:w-[40vw] sm:w-[32vw] flex flex-col sm:justify-start sm:items-start xs:items-center lg:gap-3 md:gap-6 sm:gap-6 xs:gap-6">
+                        <div class="text-white sm:text-start xs:text-center lg:text-4xl sm:text-3xl xs:text-2xl font-bold font-nunitoBold ">{item.title}</div>
+                        <div class="text-gray-400 sm:text-start xs:text-center sm:text-xl xs:text-lg font-bold font-nunitoReg">{item.description}</div>
+                    </div>
+             </div>
+            </div>                    
+        ))}
+        <!--The actual cards -->
+        { Keyfeatures.map((item) =>(
+            <div class="relative flex-1-0-100 w-[100%] sm:flex sm:flex-row sm:justify-between xs:flex-col xs:justify-center items-center gap-20 my-20 mr-20"> 
+                <div class="sm:flex sm:flex-row sm:justify-between  xs:flex-col xs:justify-center items-center gap-32">
+                    <div class="sm:w-[25vw] xs:w-[80vw]"> 
+                        <img class="object-cover" src={item.img} />
+                    </div>
+
+                    <div class="lg:w-[40vw] sm:w-[32vw] flex flex-col sm:justify-start sm:items-start xs:items-center lg:gap-3 md:gap-6 sm:gap-6 xs:gap-6">
+                        <div class="text-white sm:text-start xs:text-center lg:text-4xl sm:text-3xl xs:text-2xl font-bold font-nunitoBold ">{item.title}</div>
+                        <div class="text-gray-400 sm:text-start xs:text-center sm:text-xl xs:text-lg font-bold font-nunitoReg">{item.description}</div>
+                    </div>
+                 </div>
+            </div>                    
+        ))}
+        <!--Adding the the first card with last -->
+        { Keyfeatures.slice(0,1).map((item) =>(
+            <div class="relative flex-1-0-100 w-[100%] sm:flex sm:flex-row sm:justify-between xs:flex-col xs:justify-center items-center gap-20 my-20 mr-20"> 
+                <div class="sm:flex sm:flex-row sm:justify-between  xs:flex-col xs:justify-center items-center gap-32">
+                    <div class="sm:w-[25vw] xs:w-[80vw]"> 
+                        <img class="object-cover" src={item.img} />
+                    </div>
+
+                    <div class="lg:w-[40vw] sm:w-[32vw] flex flex-col sm:justify-start sm:items-start xs:items-center lg:gap-3 md:gap-6 sm:gap-6 xs:gap-6">
+                        <div class="text-white sm:text-start xs:text-center lg:text-4xl sm:text-3xl xs:text-2xl font-bold font-nunitoBold ">{item.title}</div>
+                        <div class="text-gray-400 sm:text-start xs:text-center sm:text-xl xs:text-lg font-bold font-nunitoReg">{item.description}</div>
+                    </div>
+                </div>
+            </div>                    
+        ))}
+
+    </div>
+
+    <button class="right-button absolute right-0 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-[#99ff66] to-[#1077fe] rounded-full p-2 z-10 ">
+        <svg class="h-10 w-10 text-black"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+    </button>
+</div>
+
+<script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      const cardSlider = document.querySelector(".cards-container-key-features");
+      const cardButtons = document.querySelectorAll(".left-button, .right-button");
+      const cards = [...document.querySelectorAll(".cards-container-key-features > div")];
+  
+      let isMoving = false;
+      let currentIndex = 1; // Start at the first "real" card.
+  
+      const cardWidth = 100; // Percentage width of each card.
+      const totalCards = cards.length; // Total number of cards (including clones).
+  
+      // Move the slider to the current index.
+      function moveSlider(instant = false) {
+        if (instant) {
+          cardSlider.style.transition = "none"; // No animation for instant move.
+        } else {
+          cardSlider.style.transition = "transform 0.5s ease-in-out"; // Smooth transition.
+        }
+        cardSlider.style.transform = `translateX(${-currentIndex * cardWidth}vw)`;
+      }
+  
+      // Handle button clicks for navigation.
+      function handleCardBtnClick(e) {
+        if (isMoving) return;
+        isMoving = true;
+  
+        // Update the current index based on button type.
+        if (e.currentTarget.classList.contains("left-button")) {
+          currentIndex--;
+        } else {
+          currentIndex++;
+        }
+  
+        moveSlider();
+  
+        // Allow further clicks after the animation completes.
+        setTimeout(() => {
+          isMoving = false;
+          handleInfiniteLoop();
+        }, 500); // Wait for the transition to complete.
+      }
+  
+      // Handle infinite looping by jumping to the corresponding "real" card.
+      function handleInfiniteLoop() {
+        if (currentIndex === 0) {
+          currentIndex = totalCards - 2; // Jump to the last "real" card.
+          moveSlider(true);
+        } else if (currentIndex === totalCards - 1) {
+          currentIndex = 1; // Jump to the first "real" card.
+          moveSlider(true);
+        }
+      }
+  
+      // Add event listeners to buttons.
+      cardButtons.forEach((button) => button.addEventListener("click", handleCardBtnClick));
+  
+      // Initialize the slider position.
+      moveSlider();
+    });
+  </script>
