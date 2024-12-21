@@ -14,6 +14,9 @@ export default {
 				'1':'1px',
 				'2':'2px',
 			},
+			borderColor:{
+				'4xl':'2rem',
+			}
 		},
 	},
 	plugins: [],

@@ -43,13 +43,13 @@ const data = [
   ];
 ---
 
-<div class="sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:mx-16 md:gap-16 xs:mx-4 xs:my-32 sm:my-2 xs:gap-12 place-items-center">
+<div class="sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:mx-16 md:gap-12 xs:mx-4 xs:my-32 sm:my-2 xs:gap-12 place-items-center ">
     {data.map((item, index) => (
         <div
             class={` sm:w-[35vw] sm:h-[30vh] xs:w-[80vw] xs:h-[30vh] flex-col 
-            bg-blue-700 rounded-tr-4xl rounded-bl-4xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -outline-offset-2 p-2 dashed-border border-2 ${
+            bg-blue-700  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -outline-offset-2 p-2 dashed-border   border-2 ${
               index % 2 !== 0 ? "place-items-start" : "place-items-end"
-            } m-4`}
+            } m-4 rounded-bl-3xl rounded-tr-3xl`}
         >
         <div
             class={`flex ${

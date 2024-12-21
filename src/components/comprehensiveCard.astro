@@ -3,44 +3,51 @@
     {
         "iconSrc": "/assets/our-comprehensive_icons/Tap-to-EarnGameDevelopment.webp",
         "heading": "Custom Tap-to-Earn Game Development",
-        "content": "We specialize in building custom Tap-to-Earn games with innovative mechanics and crypto rewards, ensuring immersive gameplay that attracts players and drives long-term engagement."
+        "content": "We specialize in building custom Tap-to-Earn games with innovative mechanics and crypto rewards, ensuring immersive gameplay that attracts players and drives long-term engagement.",
+        "index": 0
     },
     {
         "iconSrc": "/assets/our-comprehensive_icons/BlockchainIntegration.webp",
         "heading": "Blockchain Integration",
-        "content": "Our Tap-to-Earn crypto games integrate blockchain technology for secure, transparent transactions, allowing players to earn and trade rewards in the form of cryptocurrency."
+        "content": "Our Tap-to-Earn crypto games integrate blockchain technology for secure, transparent transactions, allowing players to earn and trade rewards in the form of cryptocurrency.",
+        "index": 1
     },
     {
         "iconSrc": "/assets/our-comprehensive_icons/EarnGames.webp",
         "heading": "White-Label Tap-to-Earn Games",
-        "content": "As a leading Tap-to-Earn game development company, we provide white-label solutions to customize and launch games quickly, empowering brands to stand out with unique identities."
+        "content": "As a leading Tap-to-Earn game development company, we provide white-label solutions to customize and launch games quickly, empowering brands to stand out with unique identities.",
+        "index": 2
     },
     {
         "iconSrc": "/assets/our-comprehensive_icons/GameMonetizationModels.webp",
         "heading": "Game Monetization Models",
-        "content": "We incorporate effective T2E game development monetization models, including in-game ads, microtransactions, and staking, maximizing revenue while keeping gameplay enjoyable for users."
+        "content": "We incorporate effective T2E game development monetization models, including in-game ads, microtransactions, and staking, maximizing revenue while keeping gameplay enjoyable for users.",
+        "index": 3
     },
     {
         "iconSrc": "/assets/our-comprehensive_icons/GameDesign.webp",
         "heading": "Game Design",
-        "content": "Our Tap-to-Earn game development services include creating appealing, user-friendly designs and rich features like boosters, rewards, and daily challenges to engage players consistently."
+        "content": "Our Tap-to-Earn game development services include creating appealing, user-friendly designs and rich features like boosters, rewards, and daily challenges to engage players consistently.",
+        "index": 4
     },
     {
         "iconSrc": "/assets/our-comprehensive_icons/MarketingandCommunityBuilding.webp",
         "heading": "Marketing and Community Building",
-        "content": "We assist in building strong communities around your T2E game development, leveraging social media, influencer partnerships, and referral programs to boost visibility and engagement."
+        "content": "We assist in building strong communities around your T2E game development, leveraging social media, influencer partnerships, and referral programs to boost visibility and engagement.",
+        "index": 5
     },
     {
         "iconSrc": "/assets/our-comprehensive_icons/Tap-to-EarnGameCloning.webp",
         "heading": "Tap-to-Earn Game Cloning",
-        "content": "For quick market entry, we offer Tap-to-Earn game clones based on popular games, customized to meet your branding and business objectives, ensuring rapid launch and success."
+        "content": "For quick market entry, we offer Tap-to-Earn game clones based on popular games, customized to meet your branding and business objectives, ensuring rapid launch and success.",
+        "index": 6
     }
 ]
 
 ---
-<div id="card-section-3" class="flex flex-col justify-center items-center  md:grid md:grid-cols-2 md:grid-rows-4 m-2 sm:m-16 "> 
+<div id="card-section-3" class={`flex flex-col justify-center items-center  md:grid md:grid-cols-2 md:grid-rows-4 m-2 sm:m-16`} > 
     {data.map((item, index) => (
-        <div class={`dashed-border border-1 flex items-center justify-center gap-2.5 px-2 py-4   md:px-[10vw] md:py-[5vh] ${index % 2 !== 0 ? 'border-r-0 border-t-0' : 'border-l-0 border-t-0'}`}>
+        <div class={`dashed-border border-1 flex items-center justify-center gap-2.5 px-2 py-4   md:px-[10vw] md:py-[5vh] ${index % 2 !== 0 ? 'border-r-0 border-t-0' : 'border-l-0 border-t-0'} ${index === data.length - 1 ? "col-span-2 !border-r-0 ": ""}`}>
 
             <div class="flex-col w-[80vw] h-[55vh] sm:w-[26vw] sm:h-[26vw] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[40vw] justify-items-center content-center gap-2">
                 <div class="w-[30vw] mb-4  flex items-center justify-center p-2.5 relative">
