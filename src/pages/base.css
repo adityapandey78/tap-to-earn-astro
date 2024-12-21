@@ -43,7 +43,7 @@ body
         @apply relative flex flex-col justify-center items-center gap-[1rem]
     }
     .cards-container{
-        @apply flex m-4 transform -translate-x-[100%] transition-transform duration-300 ease-in-out
+        @apply flex m-4 transform -translate-x-[100%] transition-transform duration-0 ease-in-out
     }
     .cards-container-key-features{
         @apply flex m-4 transform -translate-x-[100%] transition-transform duration-300 ease-in-out

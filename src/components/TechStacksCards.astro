@@ -1,75 +1,79 @@
 ---
 const data = [
   {
-    icon: '/assets/technologyStacks/blockchain.webp',
+    icon: "/assets/technologyStacks/blockchain.webp",
     title: "Blockchain Technologies",
-    content: ["TON", "Ethereum", "Binance Smart Chain", "Solana"]
+    content: ["TON", "Ethereum", "Binance Smart Chain", "Solana"],
   },
   {
-    icon: '/assets/technologyStacks/smartContracts.webp',
+    icon: "/assets/technologyStacks/smartContracts.webp",
     title: "Smart Contracts",
-    content: ["Solidity", "Truffle", "Hardhat"]
+    content: ["Solidity", "Truffle", "Hardhat"],
   },
   {
-    icon: '/assets/technologyStacks/gameEng.webp',
+    icon: "/assets/technologyStacks/gameEng.webp",
     title: "Game Engines",
-    content: ["Unity", "Unreal Engine"]
+    content: ["Unity", "Unreal Engine"],
   },
   {
-    icon: '/assets/technologyStacks/cloud.webp',
+    icon: "/assets/technologyStacks/cloud.webp",
     title: "Cloud Services",
-    content: ["AWS", "Google Cloud", "Microsoft Azure"]
+    content: ["AWS", "Google Cloud", "Microsoft Azure"],
   },
   {
-    icon: '/assets/technologyStacks/backend.webp',
+    icon: "/assets/technologyStacks/backend.webp",
     title: "Backend Development",
-    content: ["Node.js", "Java", "Python"]
+    content: ["Node.js", "Java", "Python"],
   },
   {
-    icon: '/assets/technologyStacks/frontend.webp',
+    icon: "/assets/technologyStacks/frontend.webp",
     title: "Frontend Development",
-    content: ["React.js", "Vue.js", "Angular"]
+    content: ["React.js", "Vue.js", "Angular"],
   },
   {
-    icon: '/assets/technologyStacks/payment.webp',
+    icon: "/assets/technologyStacks/payment.webp",
     title: "Payment Integration",
-    content: ["MetaMask", "Trust Wallet", "PayPal", "Stripe"]
+    content: ["MetaMask", "Trust Wallet", "PayPal", "Stripe"],
   },
   {
-    icon: '/assets/technologyStacks/gametest.webp',
+    icon: "/assets/technologyStacks/gametest.webp",
     title: "Game Testing & Analytics",
-    content: ["Selenium", "Jest", "Mocha", "Google Analytics"]
-  }
-  ];
+    content: ["Selenium", "Jest", "Mocha", "Google Analytics"],
+  },
+];
 ---
 
-<div class="sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:mx-16 md:gap-12 xs:mx-4 xs:my-32 sm:my-2 xs:gap-12 place-items-center ">
-    {data.map((item, index) => (
+<div
+  class="sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:mx-24 lg:mx-28 xs:mx-4 xs:my-4 sm:my-0 place-items-center gap-4 "
+>
+  {
+    data.map((item, index) => (
+      <div
+      class={` sm:w-[40vw] sm:h-[40vh] xs:w-[80vw] xs:h-[30vh] flex-col 
+      bg-blue-700  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -outline-offset-2 sm:p-12  dashed-border xs:my-4   border-2 ${
+        index % 2 !== 0 ? "place-items-start" : "place-items-end"
+      } rounded-bl-3xl rounded-tr-3xl`}
+      >
         <div
-            class={` sm:w-[35vw] sm:h-[30vh] xs:w-[80vw] xs:h-[30vh] flex-col 
-            bg-blue-700  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 -outline-offset-2 p-2 dashed-border   border-2 ${
-              index % 2 !== 0 ? "place-items-start" : "place-items-end"
-            } m-4 rounded-bl-3xl rounded-tr-3xl`}
-        >
-        <div
-            class={`flex ${
+          class={`flex ${
             index % 2 !== 0 ? "flex-row" : "flex-row-reverse"
-            } items-center`}
+          } items-center`}
         >
-            <img class="w-12 m-2" src={item.icon} alt="icon" />
-            <div class="text-center text-wrap text-white sm:text-2xl xs:text-xl font-bold font-nunitoBold">
+          <img class="w-12 m-2" src={item.icon} alt="icon" />
+          <div class="text-center text-wrap text-white sm:text-2xl xs:text-xl font-bold font-nunitoBold">
             {item.title}
-            </div>
+          </div>
         </div>
         <div
-            class={`text-gray-400 text-xl font-semibold font-nunitoReg leading-snug font-700 p-2 flex flex-col  `}
+        class={`text-gray-400 text-xl font-semibold font-nunitoReg leading-snug font-700 p-2 flex flex-col  `}
         >
-        {item.content.map((item) => (
-          <div class={`flex w-full `}>
-            <h1 class={` `}>{item}</h1>
-          </div>
-        ))}
+          {item.content.map((item) => (
+            <div class={`flex w-full `}>
+              <h1 class={`leading-relaxed`}>{item}</h1>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-    ))}
+    ))
+  }
 </div>

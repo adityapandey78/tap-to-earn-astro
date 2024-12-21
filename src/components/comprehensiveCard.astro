@@ -45,7 +45,7 @@
 ]
 
 ---
-<div id="card-section-3" class={`flex flex-col justify-center items-center  md:grid md:grid-cols-2 md:grid-rows-4 m-2 sm:m-16`} > 
+<div id="card-section-3" class='flex flex-col justify-center items-center  md:grid md:grid-cols-2 md:grid-rows-4 m-8 sm:m-16' > 
     {data.map((item, index) => (
         <div class={`dashed-border border-2 flex items-center justify-center gap-2.5 px-2 pt-4   md:px-[10vw] md:pt-[5vh] ${index % 2 !== 0 ? 'border-r-0 border-t-0' : 'border-l-0 border-t-0'} ${index === data.length - 1 ? "col-span-2 !border-r-0 ": ""}`}>
 
