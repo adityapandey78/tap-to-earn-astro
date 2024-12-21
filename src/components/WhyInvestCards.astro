@@ -63,7 +63,7 @@ const whyInvestCardData= [
   ];
 ---
 {   whyInvestCardData.map((data, index) => (
-    <div class={`lg:h-[75vh] lg:w-[30vw] md:h-[60vh] md:w-[40vw] sm:w-[50vw]  xs:w-[90vw] xs:h-[55vh]  bg-white/0 rounded-3xl flex-col  justify-center place-items-center border-2 border-[#2d2d2d] p-6 ${index===whyInvestCardData.length-1 ? "col-span-3" : ""}`}>
+    <div class={`lg:h-[80vh] lg:w-[30vw] md:h-[71vh] md:w-[40vw] sm:w-[50vw]  xs:w-[90vw] xs:h-[70vh]  bg-white/0 rounded-3xl flex-col  justify-center place-items-center border-2 border-[#2d2d2d] p-6 ${index===whyInvestCardData.length-1 ? "col-span-3" : ""}`}>
         <div class="lg:my-8 sm:my-3 xs:my-1">
             <img
                 class="w-40 h-40"
@@ -74,7 +74,7 @@ const whyInvestCardData= [
           <div class="text-center text-wrap text-white lg:text-3xl md:text-2xl sm:text-2xl xs:text-xl font-bold font-nunitoBold py-2">
             {data.title}
           </div>
-          <div class=" text-center text-wrap text-gray-400 sm:text-xl xs:text-lg font-normal font-nunitoReg leading-snug">
+          <div class=" para-text md:text-xl ">
             {data.description}
           </div>
         </div>

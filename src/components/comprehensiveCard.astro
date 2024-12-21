@@ -47,9 +47,9 @@
 ---
 <div id="card-section-3" class={`flex flex-col justify-center items-center  md:grid md:grid-cols-2 md:grid-rows-4 m-2 sm:m-16`} > 
     {data.map((item, index) => (
-        <div class={`dashed-border border-1 flex items-center justify-center gap-2.5 px-2 py-4   md:px-[10vw] md:py-[5vh] ${index % 2 !== 0 ? 'border-r-0 border-t-0' : 'border-l-0 border-t-0'} ${index === data.length - 1 ? "col-span-2 !border-r-0 ": ""}`}>
+        <div class={`dashed-border border-2 flex items-center justify-center gap-2.5 px-2 pt-4   md:px-[10vw] md:pt-[5vh] ${index % 2 !== 0 ? 'border-r-0 border-t-0' : 'border-l-0 border-t-0'} ${index === data.length - 1 ? "col-span-2 !border-r-0 ": ""}`}>
 
-            <div class="flex-col w-[80vw] h-[55vh] sm:w-[26vw] sm:h-[26vw] md:w-[40vw] md:h-[40vw] lg:w-[40vw] lg:h-[40vw] justify-items-center content-center gap-2">
+            <div class="flex-col w-[80vw] h-[55vh] sm:w-[26vw] sm:h-[26vw] md:w-[50vw] md:h-[50vw] lg:w-[40vw] lg:h-[40vw] justify-items-center content-center gap-2">
                 <div class="w-[30vw] mb-4  flex items-center justify-center p-2.5 relative">
                     <img src={'/assets/remaining-images/icon_bg.webp'} class="absolute object-cover" />
                     <img
@@ -61,7 +61,7 @@
                 <div class=" font-bold font-gothicBold text-white text-2xl md:text-3xl  text-center">
                     <h1>{item.heading}</h1>
                 </div>
-                <p class="md:h-[20vh] sm:h-[25vh] font-gothicMed text-gray-400 font-bold text-center text-lg sm:text-2xl  my-4">
+                <p class=" lg:h-[15vh] md:h-[40vh] sm:h-[25vh] font-gothicMed text-gray-400 font-bold text-center text-lg sm:text-xl  mb-6">
                     {item.content}
                 </p>
             </div>
